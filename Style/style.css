@@ -7,14 +7,16 @@
     --primary-color-1: #FD0053;
     --primary-color-2: #A80139;
     --white: white;
-    --white: rgb(23, 23, 23);
+    --black: rgb(13, 13, 13);
 }
 
 body {
-    /* background-color: rgb(28, 28, 28); */
+    height: 100vh;
 }
 
 nav {
+    position: absolute;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +30,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: var(--primary-color-2);
+    color: var(--white);
 }
 
 nav li {
@@ -52,56 +54,46 @@ nav a:hover {
 
 }
 
-nav .logo {
-    display: flex;
-    align-items: center;
-}
-
 nav img {
-    filter: brightness(0) saturate(100%) invert(13%) sepia(30%) saturate(6755%) hue-rotate(323deg) brightness(112%) contrast(118%);
     width: 67px;
 }
 
-section.promo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-section.promo .main {
-    width: 95%;
-    height: 213px;
-    border-radius: 3px;
+section.home {
     position: relative;
-}
-
-section.promo img {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
+}
+
+section.home img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 3px;
-    object-position: 0 -300px;
 }
 
-section.promo .clock {
-    font-size: 13px;
-    font-family: 'Poppins', serif ;
+section.home::after {
+    content: '';
     position: absolute;
-    bottom: 0;
+    background-color: rgba(1, 1, 41, 0.5);
+    top: 0;
     left: 0;
-    padding: 5px;
-    border-radius: 3px;
-    margin: 6px;
-    background-color: rgb(252, 254, 240);
+    width: 100%;
+    height: 100%;
+}
+
+section.home::before {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 1;
+    background: linear-gradient(0deg, var(--black) 1%, rgba(255, 255, 255, 0) 20%);
+    width: 100%;
+    height: 100%;
 }
 
 
-section.promo .display {
-    color: var(--primary-color-2);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+section.item {
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
 }
