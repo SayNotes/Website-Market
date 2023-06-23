@@ -19,3 +19,23 @@
 
 // const coba1 = new Copy()
 // console.log(coba1)
+
+
+
+
+
+
+// const text = "Hello, world!"; // Teks yang ingin ditampilkan
+// const typingEffectElement = document.getElementById("typing-effect");
+// let index = 0;
+
+// function type() {
+//   typingEffectElement.textContent = text.slice(0, index);
+
+//   if (index < text.length) {
+//     index++;
+//     setTimeout(type, 100); // Waktu penundaan antara setiap karakter
+//   }
+// }
+
+// type(); // Mulai efek ketikan saat halaman dimuat
