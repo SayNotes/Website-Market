@@ -1,6 +1,10 @@
 /*           List Font               */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@font-face {
+    font-family: 'Title';
+    src: url(../font/Stigmature.ttf) format('truetype');
+}
 
 
 :root {
@@ -12,6 +16,7 @@
 
 body {
     height: 100vh;
+    background-color: var(--black);
 }
 
 nav {
@@ -88,6 +93,36 @@ section.home::before {
     height: 100%;
 }
 
+.wrap {
+    position: absolute;
+    z-index: 3;
+    mask-image: linear-gradient( rgb(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient( rgb(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+    height: 100%;
+    width: 100%;
+}
+
+.center-content {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.center-content h1 {
+    color: var(--white);
+    font-size: 3rem;
+    margin: 5px;
+    font-family: 'Title','Poppins', sans-serif;
+}
+.center-content span {
+    color: rgb(255, 255, 164);
+    text-shadow: 1px 0 10px rgb(255, 255, 0);
+}
+
 .info-payment {
     width: 100%;
     display: flex;
@@ -116,12 +151,26 @@ section.home::before {
 .payment img {
     height: 15px;
     margin-right: 10px;
-    opacity: .5;
     transition: 150ms ease-in;
 }
-
-.payment img:hover {
-    opacity: 1;
+.payment img:nth-child(1) {
+    animation: highlight infinite both 2s;
+}
+.payment img:nth-child(2) {
+    animation: highlight infinite both 2s;
+    animation-delay: 200ms;
+}
+.payment img:nth-child(3) {
+    animation: highlight infinite both 2s;
+    animation-delay: 400ms;
+}
+.payment img:nth-child(4) {
+    animation: highlight infinite both 2s;
+    animation-delay: 600ms;
+}
+.payment img:nth-child(5) {
+    animation: highlight infinite both 2s;
+    animation-delay: 800ms;
 }
 
 section.item {
@@ -146,6 +195,26 @@ section.item {
     section.home {
         background-position: 25%;
     }
+
+    .center-content {
+        flex-direction: column;
+    }
+
+    .center-content h1 {
+        margin: 0;
+    }
+
+    .info-payment {
+        margin-bottom: 40px;
+    }
+
+    .center-content h1:nth-child(1) {
+        animation: sideInRight alternate 1.3s;
+    }
+    .center-content h1:nth-child(2) {
+        animation: sideInLeft alternate 1.3s;
+    }
+    
 
     .payment img {
         height: 12px;
@@ -172,3 +241,31 @@ section.item {
     from, to { border-color: transparent }
     50% { border-color: #333 }
 } */
+
+@keyframes highlight {
+    0% {
+        opacity: .3;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .3;
+    }
+}
+@keyframes sideInRight {
+    0% {
+        transform: translateX(150%);
+    }
+    150% {
+        transform: translateX(0);
+    }
+}
+@keyframes sideInLeft {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
