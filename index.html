@@ -11,8 +11,9 @@
 </head>
 
 <body>
-    <nav>
 
+
+    <nav id="nav">
         <ul>
             <img src="img/logo.png" alt="">
             <li>
@@ -33,38 +34,108 @@
         </form>
     </nav>
 
-    <section class="home bg-images">
-        <div class="info-payment">
-            <h1>Payment</h1>
-            <div class="payment">
-                <img src="img-logo/dana.png" alt="">
-                <img src="img-logo/gopay.png" alt="">
-                <img src="img-logo/ovo.png" alt="">
-                <img src="img-logo/qris.png" alt="">
-                <img src="img-logo/bank-jago.png" alt="">
+
+
+    <section class="home" id="home-page">
+        <div class="wrap-content">
+            <div class="first">
+                <img src="img/img-home/hutao-art.jpg" alt="">
+            </div>
+            <div class="second">
+                <img src="img/img-home/hutao-art.jpg" alt="">
+            </div>
+            <div class="third">
+                <img src="img/img-home/hutao-art.jpg" alt="">
             </div>
         </div>
     </section>
 
-    <section class="item">
-        <!-- <h1 id="typing-effect"></h1> -->
-        <div class="title">
-            <h1> <img src="img-logo/BagShopping.png" alt=""> Product</h1>
-        </div>
-        <div class="list-item">
 
-            <div class="card">
-                <div class="img-item background-pattern">
-                    <!-- <img src="img/kazuha_sleep.jpg" alt=""> -->
+
+    <section class="item">
+        <div class="wrap-section">
+            <div class="title">
+                <h1><img src="img-logo/BagShopping.png" alt="">Product</h1>
+            </div>
+            <div class="list-item">
+                <div class="card">
+                    <div class="img-item background-pattern">
+                        <!-- <img src="img/kazuha_sleep.jpg" alt=""> -->
+                    </div>
+                    <h1 class="name-item">Local</h1>
+                    <h1 class="price-item" id="result">0</h1>
+                    <form class="demand">
+                        <input type="number" id="numericInput" name="numericInput" pattern="[0-9]" required>
+                        <button class="button" type="button" onclick="increment()">+</button>
+                        <button class="button" type="button" onclick="decrement()">-</button>
+                    </form>
+                    <button class="submit-button" onclick="buttonClicked()">Tambahkan ke Keranjang</button>
                 </div>
-                <h1 class="name-item">Local</h1>
-                <h1 class="price-item" id="result">0</h1>
-                <form class="demand">
-                    <input type="number" id="numericInput" name="numericInput" pattern="[0-9]" required>
-                    <button class="button" type="button" onclick="increment()">+</button>
-                    <button class="button" type="button" onclick="decrement()">-</button>
-                </form>
-                <button class="submit-button" onclick="buttonClicked()">Tambahkan ke Keranjang</button>
+                <div class="card">
+                    <div class="img-item background-pattern">
+                        <!-- <img src="img/kazuha_sleep.jpg" alt=""> -->
+                    </div>
+                    <h1 class="name-item">Local</h1>
+                    <h1 class="price-item" id="result">0</h1>
+                    <form class="demand">
+                        <input type="number" id="numericInput" name="numericInput" pattern="[0-9]" required>
+                        <button class="button" type="button" onclick="increment()">+</button>
+                        <button class="button" type="button" onclick="decrement()">-</button>
+                    </form>
+                    <button class="submit-button" onclick="buttonClicked()">Tambahkan ke Keranjang</button>
+                </div>
+                <div class="card">
+                    <div class="img-item background-pattern">
+                        <!-- <img src="img/kazuha_sleep.jpg" alt=""> -->
+                    </div>
+                    <h1 class="name-item">Local</h1>
+                    <h1 class="price-item" id="result">0</h1>
+                    <form class="demand">
+                        <input type="number" id="numericInput" name="numericInput" pattern="[0-9]" required>
+                        <button class="button" type="button" onclick="increment()">+</button>
+                        <button class="button" type="button" onclick="decrement()">-</button>
+                    </form>
+                    <button class="submit-button" onclick="buttonClicked()">Tambahkan ke Keranjang</button>
+                </div>
+                <div class="card">
+                    <div class="img-item background-pattern">
+                        <!-- <img src="img/kazuha_sleep.jpg" alt=""> -->
+                    </div>
+                    <h1 class="name-item">Local</h1>
+                    <h1 class="price-item" id="result">0</h1>
+                    <form class="demand">
+                        <input type="number" id="numericInput" name="numericInput" pattern="[0-9]" required>
+                        <button class="button" type="button" onclick="increment()">+</button>
+                        <button class="button" type="button" onclick="decrement()">-</button>
+                    </form>
+                    <button class="submit-button" onclick="buttonClicked()">Tambahkan ke Keranjang</button>
+                </div>
+                <div class="card">
+                    <div class="img-item background-pattern">
+                        <!-- <img src="img/kazuha_sleep.jpg" alt=""> -->
+                    </div>
+                    <h1 class="name-item">Local</h1>
+                    <h1 class="price-item" id="result">0</h1>
+                    <form class="demand">
+                        <input type="number" id="numericInput" name="numericInput" pattern="[0-9]" required>
+                        <button class="button" type="button" onclick="increment()">+</button>
+                        <button class="button" type="button" onclick="decrement()">-</button>
+                    </form>
+                    <button class="submit-button" onclick="buttonClicked()">Tambahkan ke Keranjang</button>
+                </div>
+                <div class="card">
+                    <div class="img-item background-pattern">
+                        <!-- <img src="img/kazuha_sleep.jpg" alt=""> -->
+                    </div>
+                    <h1 class="name-item">Local</h1>
+                    <h1 class="price-item" id="result">0</h1>
+                    <form class="demand">
+                        <input type="number" id="numericInput" name="numericInput" pattern="[0-9]" required>
+                        <button class="button" type="button" onclick="increment()">+</button>
+                        <button class="button" type="button" onclick="decrement()">-</button>
+                    </form>
+                    <button class="submit-button" onclick="buttonClicked()">Tambahkan ke Keranjang</button>
+                </div>
             </div>
         </div>
     </section>

@@ -35,3 +35,25 @@ function buttonClicked() {
         alert("Pesanan tidak dapat masuk");
     }
 };
+
+const navBar = document.getElementById("nav");
+const homePage = document.getElementById("home-page");
+const heightNavbar = navBar.clientHeight;
+
+window.addEventListener("scroll", function() {
+
+    if (window.scrollY > heightNavbar) {
+        navBar.style.position = "fixed";
+        navBar.style.top = 0;
+        navBar.style.left = 0;
+        navBar.style.zIndex = 999;
+        navBar.style.animationName = "upToDown";
+        navBar.style.animationDuration = "300ms";
+        navBar.style.animationTimingFunction = "ease in";
+        homePage.style.marginTop = `${heightNavbar}px`
+    } else {
+        navBar.style.position = "static";
+        navBar.style.animation = "";
+        homePage.style.marginTop = 0;
+    }
+});
