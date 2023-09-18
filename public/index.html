@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Joki</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-slate-900">
+    <!-- <div id="welcome-user">
+        <img src="img-home/sucrose-9.png" alt="Welcome" onclick="closePopUp()">
+        <h1>Selamat datang kak!</h1>
+    </div> -->
+    <nav id="nav">
+        <ul>
+            <img src="../img/logo.png">
+            <li>
+                <a href="">Promotion</a>
+                <a href="">Product</a>
+                <a href="">Testimoni</a>
+                <a href="">About</a>
+            </li>
+            <img src="img-logo/bag-shop.png" alt="bag logo" class="img-logo">
+        </ul>
+        <form id="search-bar">
+            <!-- <label for="tagInput">Pencarian<label> -->
+            <div class="wrap-search">
+                <img src="img-logo/search.png" alt="search icon">
+                <input type="text" id="tag-input" placeholder="Search item...">
+            </div>
+            <!-- <button type="submit" id="searchButton">Search</button> -->
+        </form>
+    </nav>
+
+
+
+    <section id="home-page">
+        <div class="wrap-content">
+            <div class="first">
+            </div>
+            <div class="second">
+            </div>
+            <div class="third">
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section id="item-page">
+        <div class="wrap-section">
+            <div class="title">
+                <h1>Product
+                    <span>Jasa Joki</span>
+                </h1>
+            </div>
+            <div class="list-item">
+                <div class="card">
+                    <div class="img-item background-pattern">
+                        <!-- <img src="img/kazuha_sleep.jpg" alt=""> -->
+                    </div>
+                    <h1 class="name-item">Local</h1>
+                    <h1 class="price-item" id="result">0</h1>
+                    <form class="demand">
+                        <input type="number" id="numericInput" name="numericInput" pattern="[0-9]" required>
+                        <button class="button" type="button" onclick="increment()">+</button>
+                        <button class="button" type="button" onclick="decrement()">-</button>
+                    </form>
+                    <button class="submit-button" onclick="buttonClicked()">Tambahkan ke Keranjang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer-page">
+        <img src="img/logo.png" alt="logo" id="logo-footer">
+        <h1>This website was created by Me</h1>
+        <div class="sosial-media">
+            <img src="" alt="">
+        </div>
+    </section>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
