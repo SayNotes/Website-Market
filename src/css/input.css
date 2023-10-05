@@ -9,10 +9,10 @@
         @apply hover:text-slate-400 transition duration-150 m-2 uppercase text-sm font-poppins
     }
     .btn-plus {
-        @apply flex-all-center h-full text-lg aspect-square rounded-md text-slate-100 bg-slate-600 leading-relaxed font-extrabold
+        @apply flex-all-center h-full text-lg aspect-square rounded-md text-slate-300 bg-slate-700 leading-relaxed font-medium
     }
     .btn-minus {
-        @apply flex-all-center h-full text-lg aspect-square rounded-md text-slate-100 bg-slate-600 leading-relaxed font-extrabold
+        @apply flex-all-center h-full text-lg aspect-square rounded-md text-slate-300 bg-slate-700 leading-relaxed font-medium
     }
     .flex-all-center {
         display: flex;

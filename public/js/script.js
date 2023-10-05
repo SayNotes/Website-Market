@@ -8,30 +8,35 @@
 
 // function formatNumberWithCommas(number) {
 //   return number.toLocaleString();
-// }
-const listCard = document.getElementsByClassName('list-card')
-const cards = document.getElementsByClassName('card')
+// }]
 
-const input = document.getElementById('inputAmount');
+const cardList = document.getElementsByClassName('list-card');
+const cards = document.getElementsByClassName('card');
+const btnPlus = document.getElementsByClassName('btn-plus');
+const btnMinus = document.getElementsByClassName('btn-minus');
+const input = document.getElementsByClassName('inputAmount');
+// input.addEventListener('input', (event) => {
+//   let value = event.target.value;
+//   value = value.replace(/\D/g, '');  // Hanya mempertahankan digit (angka)
+//   event.target.value = value;
+// });
 
-input.addEventListener('input', (event) => {
-  let value = event.target.value;
-  value = value.replace(/[^0-9]/g, '');  // Hanya mempertahankan angka
-  event.target.value = value;
-});
+
 function increment() {
-  let valueNumber = parseInt(input.value) || 0;
-  input.value = valueNumber + 1;
+  let valueNumber = parseInt(input.inputAmount.value) || 0;
+  input.inputAmount.value = valueNumber + 100;
 }
+
 function decrement() {
-  let valueNumber = parseInt(input.value) || 0;
-  if (valueNumber > 0) {
-    input.value = valueNumber - 1;
+  let value = parseInt(input.inputAmount.value) || 0;
+  if (value > 0) {
+    input.inputAmount.value = value - 100;
   }
 }
+
 function buttonClicked() {
-  alert(`Pesanan senilai Rp.${input.value} telah masuk`)
-}
+  alert(`Pesanan senilai Rp.${input.inputAmount.value} telah masuk`)
+};
 
 // window.addEventListener("scroll", function () {
 //   if (window.scrollY > navbar.clientHeight) {
@@ -43,3 +48,6 @@ function buttonClicked() {
 //     homePage.style.marginTop = 0;
 //   }
 // });
+
+
+
