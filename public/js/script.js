@@ -22,6 +22,7 @@ const input = document.getElementsByClassName('inputAmount');
 // });
 
 
+
 function increment() {
   let valueNumber = parseInt(input.inputAmount.value) || 0;
   input.inputAmount.value = valueNumber + 100;
@@ -50,4 +51,36 @@ function buttonClicked() {
 // });
 
 
+
+const listCategory = document.getElementById("list-category");
+let isDragging = false;
+let startX = 0;
+
+const startDrag = (e) => {
+  isDragging = true;
+  listCategory.classList.add("scroll-auto");
+  startX = e.clientX || e.touches[0].clientX;
+};
+console.log(startX);
+
+const drag = (e) => {
+  if (!isDragging) return;
+  const currentX = e.clientX || e.touches[0].clientX;
+  const diffX = startX - currentX;
+  listCategory.scrollLeft += diffX;
+  startX = currentX;
+};
+
+const stopDrag = () => {
+  isDragging = false;
+  listCategory.classList.remove("scroll-auto");
+};
+
+listCategory.addEventListener("mousedown", startDrag);
+listCategory.addEventListener("mousemove", drag);
+document.addEventListener("mouseup", stopDrag);
+
+listCategory.addEventListener("touchstart", startDrag);
+listCategory.addEventListener("touchmove", drag);
+document.addEventListener("touchend", stopDrag);
 

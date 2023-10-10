@@ -14,6 +14,12 @@
     .btn-minus {
         @apply flex-all-center h-full text-lg aspect-square rounded-md text-slate-300 bg-slate-700 leading-relaxed font-medium
     }
+    .btn-category {
+        @apply px-2 py-1 text-sm whitespace-nowrap bg-blue-600 text-blue-100 rounded-md tracking-wide
+    }
+    .btn-category-highlight {
+        @apply border-0 border-blue-400
+    }
     .flex-all-center {
         display: flex;
         justify-content: center;
