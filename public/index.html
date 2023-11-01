@@ -13,7 +13,7 @@
     <div class="w-full h-screen absolute top-0 left-0 -z-50 bg-gradientDarken"></div>
     <nav id="nav" class="w-full h-max p-4 flex-all-center flex-col">
         <ul class=" w-11/12 flex justify-between items-center">
-            <img class="w-20" src="../img/logo.png">
+            <img class="w-20" src="../src/img/home/logo.png">
             <li class="hidden text-slate-100">
                 <a href="" class="hover-navbar">home</a>
                 <a href="" class="hover-navbar">Product</a>
@@ -52,21 +52,32 @@
 
 
 
-    <section id="home-page" class=" w-full h-3/6">
-        <div id="home-wrap" class="flex-all-center w-full h-full">
-            <div class="grid grid-cols-2 grid-rows-2 gap-2 
-                        w-11/12 h-full
-                        pt-3">
-                <div class="bg-slate-700 w-full h-full text-white rounded-md 
-                            col-span-2">
+    <section id="home-page" class=" w-full flex-all-center">
+        <div id="home-wrap" class="w-11/12">
+            <div class="flex flex-col md:flex-row ">
+                <div class="bg-slate-700 flex-all-center w-full text-white rounded-md h-40 sm:h-56 md:h-80">
+                    <img class="object-cover h-full object-center rounded-md" src="../src/img/home/one.webp"
+                        alt="Home Product">
                 </div>
-                <div class="bg-slate-700 w-full h-full text-white rounded-md">
-                    <!-- <img src="../src/img/genshin-option.webp" alt="Genshin Impact"
-                    class="object-cover h-full w-full"> -->
-                </div>
-                <div class="bg-slate-700 w-full h-full text-white rounded-md">
-                    <!-- <img src="../src/img/honkai-option.webp" alt="Genshin Impact"
-                    class="object-cover h-full w-full"> -->
+                <div class="bg-slate-800 w-full flex-col flex p-1 text-white rounded-md mt-4  md:m-0 md:w-5/12">
+                    <div class="w-full py-2">
+                        <h1 class="font-poppins py-1 text-sm bg-slate-800 text-slate-200 rounded-md text-center">
+                            Choose Game :</h1>
+                    </div>
+
+                    <div class="w-full flex gap-1 md:flex-col">
+                        <div class="flex-all-center bg-slate-900 py-2 px-2 rounded-md w-full">
+                            <img src="../public/css/img-logo/honkai-star-rail.webp" alt="Genshin Impact"
+                                class="h-6 rounded-md">
+                            <h1 class="font-poppins text-xs ml-2">Honkai: Star Rail</h1>
+                        </div>
+                        <div class="flex-all-center bg-slate-900 py-2 px-2 rounded-md w-full">
+                            <img src="../public/css/img-logo/genshin-impact.webp" alt="Genshin Impact"
+                                class="h-6 rounded-md">
+                            <h1 class="font-poppins text-xs ml-2">Genshin Impact</h1>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -74,12 +85,13 @@
 
 
     <section id="item-page" class="w-full flex-all-center">
-        <div class="flex-all-center flex-col w-11/12 m-6 pb-4">
+        <div class="flex flex-col w-11/12 mt-8 pb-4">
 
-            <div class="flex w-full justify-left">
+            <div class="flex w-full justify-between items-center">
                 <h1 class="font-poppins  text-lg text-white uppercase font-semibold">Product</h1>
+                <img src="css/img-logo/filter-svgrepo-com.png" class="h-5 fill-whiteImage" alt="filter">
             </div>
-            <div id="list-category" class="relative gap-2 overflow-hidden flex items-center w-full mt-2">
+            <div id="list-category" class="relative gap-2 overflow-hidden flex items-center w-full my-2">
                 <!-- <img class="bg-slate-100 rounded-full absolute w-6 left-0 ml-2" src="../src/img/left-arrow.png" alt="left">
                 <img class="bg-slate-100 rounded-full absolute w-6 right-0 mr-2 rotate-180" src="../src/img/left-arrow.png" alt="right"> -->
                 <button type="button" class="select-category btn-category btn-category-highlight">Rawat Akun</button>
@@ -91,57 +103,130 @@
                 <button type="button" class="select-category btn-category">Spam Resin</button>
             </div>
 
-            <div id="list-card" class="w-full grid grid-cols-2 gap-2 mt-4">
-
-                <div class="card w-full h-fit bg-slate-800 p-2 rounded-lg shadow-md shadow-slate-700">
-                    <div class="card-img w-full h-3/6">
+            <!-- <div class="category-item mt-2">
+                <h1 class="font-poppins px-2 py-1 text-xs bg-slate-800 text-slate-200 rounded-md">Rawat Akun</h1>
+            </div> -->
+            <div id="list-card" class=" flex  gap-4 mt-4">
+                <div class="card w-full h-fit bg-slate-800 p-1 rounded-lg shadow-md shadow-slate-700">
+                <div class="card-img w-full h-3/6">
                         <img class="object-cover w-full h-full rounded-md" src="../src/img/error-404.png" alt="Item">
                     </div>
                     <h1 class="font-poppins text-slate-200 text-sm mt-2">Material Inazuma</h1>
-                    <h1 class="font-poppins text-slate-100 text-md font-medium" id="result">Rp10,000</h1>
+                    <h1 class="font-poppins text-slate-100 text-md font-medium mt-1" id="result">Rp10,000</h1>
                     <div class="discount flex items-center">
-                        <h1 class="font-poppins text-red-200 bg-red-900 text-xs p-1 rounded-md font-medium">66%</h1>
-                        <h1 class="font-poppins text-slate-500 text-sm ml-2 line-through" id="result">Rp15,000</h1>
+                        <h1 class="font-poppins text-slate-500 text-sm line-through" id="result">Rp15,000</h1>
+                        <h1 class="font-poppins text-red-300 bg-red-900 text-xs ml-1.5 py-0.5 px-1 rounded-md">66%</h1>
                     </div>
                     <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
-                        <button type="button" class="btn-minus font-poppins" onclick="decrement() ">
+                        <button type="button" class="btn-minus font-poppins">
                             -
                         </button>
-                        <input class="inputAmount w-full h-full mx-2 rounded-md text-center text-sm" type="number"
+                        <input class="inputAmount w-full h-full mx-2 rounded-md text-center text-xx\s" type="number"
                             name="inputAmount" min="0" step="10">
-                        <button type="button" class="btn-plus font-poppins" onclick="increment()">
+                        <button type="button" class="btn-plus font-poppins">
                             +
                         </button>
                     </form>
                     <button
                         class="btn-submit font-semibold font-poppins text-slate-100 bg-blue-600 rounded-full w-full p-1 text-xs mt-3"
-                        onclick="buttonClicked()">Tambahkan</button>
+                        onclick="buttonClicked()">Add To Cart</button>
                 </div>
-                <div class="card w-full h-fit bg-slate-800 p-2 rounded-lg shadow-md shadow-slate-700">
-                    <div class="card-img w-full h-3/6">
+                <div class="card w-60 h-fit bg-slate-800 p-1 rounded-lg shadow-md shadow-slate-700">
+                    <div class="card-img w-full aspect-square">
                         <img class="object-cover w-full h-full rounded-md" src="../src/img/error-404.png" alt="Item">
                     </div>
                     <h1 class="font-poppins text-slate-200 text-sm mt-2">Material Inazuma</h1>
-                    <h1 class="font-poppins text-slate-100 text-md font-medium" id="result">Rp10,000</h1>
+                    <h1 class="font-poppins text-slate-100 text-md font-medium mt-1" id="result">Rp10,000</h1>
                     <div class="discount flex items-center">
-                        <h1 class="font-poppins text-red-200 bg-red-900 text-xs p-1 rounded-md font-medium">66%</h1>
-                        <h1 class="font-poppins text-slate-500 text-sm ml-2 line-through" id="result">Rp15,000</h1>
+                        <h1 class="font-poppins text-slate-500 text-sm line-through" id="result">Rp15,000</h1>
+                        <h1 class="font-poppins text-red-300 bg-red-900 text-xs ml-1.5 py-0.5 px-1 rounded-md">66%</h1>
                     </div>
                     <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
-                        <button type="button" class="btn-minus font-poppins" onclick="decrement() ">
+                        <button type="button" class="btn-minus font-poppins">
                             -
                         </button>
-                        <input class="inputAmount w-full h-full mx-2 rounded-md text-center text-sm" type="number"
+                        <input class="inputAmount w-full h-full mx-2 rounded-md text-center text-xx\s" type="number"
                             name="inputAmount" min="0" step="10">
-                        <button type="button" class="btn-plus font-poppins" onclick="increment()">
+                        <button type="button" class="btn-plus font-poppins">
                             +
                         </button>
                     </form>
                     <button
                         class="btn-submit font-semibold font-poppins text-slate-100 bg-blue-600 rounded-full w-full p-1 text-xs mt-3"
-                        onclick="buttonClicked()">Tambahkan</button>
+                        onclick="buttonClicked()">Add To Cart</button>
                 </div>
-
+                <div class="card w-full h-fit bg-slate-800 p-1 rounded-lg shadow-md shadow-slate-700">
+                    <div class="card-img w-full h-3/6">
+                        <img class="object-cover w-full h-full rounded-md" src="../src/img/error-404.png" alt="Item">
+                    </div>
+                    <h1 class="font-poppins text-slate-200 text-sm mt-2">Material Inazuma</h1>
+                    <h1 class="font-poppins text-slate-100 text-md font-medium mt-1" id="result">Rp10,000</h1>
+                    <div class="discount flex items-center">
+                        <h1 class="font-poppins text-slate-500 text-sm line-through" id="result">Rp15,000</h1>
+                        <h1 class="font-poppins text-red-300 bg-red-900 text-xs ml-1.5 py-0.5 px-1 rounded-md">66%</h1>
+                    </div>
+                    <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
+                        <button type="button" class="btn-minus font-poppins">
+                            -
+                        </button>
+                        <input class="inputAmount w-full h-full mx-2 rounded-md text-center text-xx\s" type="number"
+                            name="inputAmount" min="0" step="10">
+                        <button type="button" class="btn-plus font-poppins">
+                            +
+                        </button>
+                    </form>
+                    <button
+                        class="btn-submit font-semibold font-poppins text-slate-100 bg-blue-600 rounded-full w-full p-1 text-xs mt-3"
+                        onclick="buttonClicked()">Add To Cart</button>
+                </div>
+                <div class="card w-full h-fit bg-slate-800 p-1 rounded-lg shadow-md shadow-slate-700">
+                    <div class="card-img w-full h-3/6">
+                        <img class="object-cover w-full h-full rounded-md" src="../src/img/error-404.png" alt="Item">
+                    </div>
+                    <h1 class="font-poppins text-slate-200 text-sm mt-2">Material Inazuma</h1>
+                    <h1 class="font-poppins text-slate-100 text-md font-medium mt-1" id="result">Rp10,000</h1>
+                    <div class="discount flex items-center">
+                        <h1 class="font-poppins text-slate-500 text-sm line-through" id="result">Rp15,000</h1>
+                        <h1 class="font-poppins text-red-300 bg-red-900 text-xs ml-1.5 py-0.5 px-1 rounded-md">66%</h1>
+                    </div>
+                    <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
+                        <button type="button" class="btn-minus font-poppins">
+                            -
+                        </button>
+                        <input class="inputAmount w-full h-full mx-2 rounded-md text-center text-xx\s" type="number"
+                            name="inputAmount" min="0" step="10">
+                        <button type="button" class="btn-plus font-poppins">
+                            +
+                        </button>
+                    </form>
+                    <button
+                        class="btn-submit font-semibold font-poppins text-slate-100 bg-blue-600 rounded-full w-full p-1 text-xs mt-3"
+                        onclick="buttonClicked()">Add To Cart</button>
+                </div>
+                <div class="card w-full h-fit bg-slate-800 p-1 rounded-lg shadow-md shadow-slate-700">
+                    <div class="card-img w-full h-3/6">
+                        <img class="object-cover w-full h-full rounded-md" src="../src/img/error-404.png" alt="Item">
+                    </div>
+                    <h1 class="font-poppins text-slate-200 text-sm mt-2">Material Inazuma</h1>
+                    <h1 class="font-poppins text-slate-100 text-md font-medium mt-1" id="result">Rp10,000</h1>
+                    <div class="discount flex items-center">
+                        <h1 class="font-poppins text-slate-500 text-sm line-through" id="result">Rp15,000</h1>
+                        <h1 class="font-poppins text-red-300 bg-red-900 text-xs ml-1.5 py-0.5 px-1 rounded-md">66%</h1>
+                    </div>
+                    <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
+                        <button type="button" class="btn-minus font-poppins">
+                            -
+                        </button>
+                        <input class="inputAmount w-full h-full mx-2 rounded-md text-center text-xx\s" type="number"
+                            name="inputAmount" min="0" step="10">
+                        <button type="button" class="btn-plus font-poppins">
+                            +
+                        </button>
+                    </form>
+                    <button
+                        class="btn-submit font-semibold font-poppins text-slate-100 bg-blue-600 rounded-full w-full p-1 text-xs mt-3"
+                        onclick="buttonClicked()">Add To Cart</button>
+                </div>
             </div>
         </div>
     </section>
@@ -150,28 +235,26 @@
             <div id="logo-footer" class="flex-all-center p-2">
                 <img class="w-20" src="../img/logo.png" alt="logo">
             </div>
-            <div class="logo-media-social flex justify-center gap-4 w-full py-4">
+            <h1 class="mt-2.5 text-center text-xs rounded-full p-1 bg-slate-900 text-slate-400">Social Media</h1>
+            <div class="logo-media-social flex justify-center gap-4 py-4">
+
                 <div class="wrap-logo flex-all-center flex-col">
-                    <img class="rounded-full w-12" src="./css/img-logo/facebook-logo.png" alt="">
-                    <h1 class="mt-2.5 text-center text-xs rounded-full p-1 bg-slate-900 text-slate-400">Facebook</h1>
+                    <img class="rounded-md w-8" src="./css/img-logo/facebook-logo.png" alt="">
                 </div>
                 <div class="wrap-logo flex-all-center flex-col">
-                    <img class="rounded-full w-12" src="./css/img-logo/instagram-logo.png" alt="">
-                    <h1 class="mt-2.5 text-center text-xs rounded-full p-1 bg-slate-900 text-slate-400">Instagram</h1>
+                    <img class="rounded-md w-8" src="./css/img-logo/instagram-logo.png" alt="">
                 </div>
                 <div class="wrap-logo flex-all-center flex-col">
-                    <img class="rounded-full w-12" src="./css/img-logo/telegram-logo.png" alt="">
-                    <h1 class="mt-2.5 text-center text-xs rounded-full p-1 bg-slate-900 text-slate-400">Telegram</h1>
+                    <img class="rounded-md w-8" src="./css/img-logo/telegram-logo.png" alt="">
                 </div>
                 <div class="wrap-logo flex-all-center flex-col">
-                    <img class="rounded-full w-12" src="./css/img-logo/wa-logo.png" alt="">
-                    <h1 class="mt-2.5 text-center text-xs rounded-full p-1 bg-slate-900 text-slate-400">WhatsApp</h1>
+                    <img class="rounded-md w-8" src="./css/img-logo/wa-logo.png" alt="">
                 </div>
 
             </div>
-            <div class="footer-content ">
-                <div class="about w-full flex flex-col">
-
+            <!-- <div class="footer-content ">
+                <div class="about w-full flex flex-col"> -->
+            <!-- 
                     <h1 class="font-poppins text-md text-slate-200 mt-2">About</h1>
                     <p class="rounded-md font-poppins text-xs text-slate-500 p-1">Halo, nama saya
                         <span class="text-blue-600">Sultan</span>.
@@ -195,10 +278,8 @@
                             <a class="rounded-md font-poppins text-xs text-slate-500 bg-slate-900 p-2">Telegram</a>
                             <a class="rounded-md font-poppins text-xs text-slate-500 bg-slate-900 p-2">Messenger</a>
                         </li>
-                    </ul>
+                    </ul> -->
 
-                </div>
-            </div>
         </div>
     </section>
 

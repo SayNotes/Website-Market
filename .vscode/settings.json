@@ -1,3 +1,8 @@
 {
-    "livePreview.defaultPreviewPath": "/public/index.html"
+    "livePreview.defaultPreviewPath": "/public/index.html",
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.scrollByPage": false,
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": false
 }
