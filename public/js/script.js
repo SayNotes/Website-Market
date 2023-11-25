@@ -10,27 +10,56 @@
 //   return number.toLocaleString();
 // }]
 
-const cards = document.getElementsByClassName('card');
-const btnPlus = document.getElementsByClassName('btn-plus');
-const btnMinus = document.getElementsByClassName('btn-minus');
-const input = document.getElementsByClassName('inputAmount');
-// input.addEventListener('input', (event) => {
-//   let value = event.target.value;
-//   value = value.replace(/\D/g, '');  // Hanya mempertahankan digit (angka)
-//   event.target.value = value;
-// });
+// const cards = document.getElementsByClassName('card');
+// const btnPlus = document.getElementsByClassName('btn-plus');
+// const btnMinus = document.getElementsByClassName('btn-minus');
+// const input = document.getElementsByClassName('inputAmount');
 
-for (let i = 0; i < btnPlus.length; i++) {
-  let btnPlusIndex = btnPlus[i]
 
-  btnPlusIndex.addEventListener('onclick', () => {
-    let getInputIndex = input[i]
-    let valueInput = parseInt(getInputIndex.value) || 0;
-    getInputIndex.value = valueInput + 100
-    console.log(getInputIndex)
-  })
+// for (let i = 0; i < btnPlus.length; i++) {
+//   let btnPlusIndex = btnPlus[i]
+
+//   btnPlusIndex.addEventListener('onclick', () => {
+//     let getInputIndex = input[i]
+//     let valueInput = parseInt(getInputIndex.value) || 0;
+//     getInputIndex.value = valueInput + 100
+//     console.log(getInputIndex)
+//   })
   
+// }
+
+class QuantityHandler {
+  constructor() {
+      this.decrementBtn = document.querySelector('.btn-minus');
+      this.incrementBtn = document.querySelector('.btn-plus');
+      this.quantityInput = document.getElementsById('quantity');
+
+      this.decrementBtn.addEventListener('click', this.decrement.bind(this));
+      this.incrementBtn.addEventListener('click', this.increment.bind(this));
+      this.quantityInput.addEventListener('input', this.checkInput.bind(this));
+  }
+
+  decrement() {
+      let currentValue = parseInt(this.quantityInput.value);
+      if (currentValue > 0) {
+          this.quantityInput.value = currentValue - 10; // Decrease by 10 or any desired step
+      }
+  }
+
+  increment() {
+      let currentValue = parseInt(this.quantityInput.value);
+      this.quantityInput.value = currentValue + 10; // Increase by 10 or any desired step
+  }
+
+  checkInput() {
+      if (this.quantityInput.value < 0 || this.quantityInput.value === '') {
+          this.quantityInput.value = 0;
+      }
+  }
 }
+
+// Membuat instance baru dari class QuantityHandler
+const quantityHandler = new QuantityHandler();
 
 
 
@@ -63,38 +92,42 @@ function buttonClicked() {
 // });
 
 
-{
-  const listCategory = document.getElementById("list-category");
-  let isDragging = false;
-  let startX = 0;
+class DragScroll {
+  constructor(elementId) {
+    this.listCategory = document.getElementById(elementId);
+    this.isDragging = false;
+    this.startX = 0;
 
-  const startDrag = (e) => {
-    isDragging = true;
-    listCategory.classList.add("scroll-auto");
-    startX = e.clientX || e.touches[0].clientX;
-  };
+    this.listCategory.addEventListener("mousedown", this.startDrag.bind(this));
+    this.listCategory.addEventListener("mousemove", this.drag.bind(this));
+    document.addEventListener("mouseup", this.stopDrag.bind(this));
 
-  const drag = (e) => {
-    if (!isDragging) return;
+    this.listCategory.addEventListener("touchstart", this.startDrag.bind(this));
+    this.listCategory.addEventListener("touchmove", this.drag.bind(this));
+    document.addEventListener("touchend", this.stopDrag.bind(this));
+  }
+
+  startDrag(e) {
+    this.isDragging = true;
+    this.listCategory.classList.add("scroll-auto");
+    this.startX = e.clientX || e.touches[0].clientX;
+  }
+
+  drag(e) {
+    if (!this.isDragging) return;
     const currentX = e.clientX || e.touches[0].clientX;
-    const diffX = startX - currentX;
-    listCategory.scrollLeft += diffX;
-    startX = currentX;
-  };
+    const diffX = this.startX - currentX;
+    this.listCategory.scrollLeft += diffX;
+    this.startX = currentX;
+  }
 
-  const stopDrag = () => {
-    isDragging = false;
-    listCategory.classList.remove("scroll-auto");
-  };
-
-  listCategory.addEventListener("mousedown", startDrag);
-  listCategory.addEventListener("mousemove", drag);
-  document.addEventListener("mouseup", stopDrag);
-
-  listCategory.addEventListener("touchstart", startDrag);
-  listCategory.addEventListener("touchmove", drag);
-  document.addEventListener("touchend", stopDrag);
+  stopDrag() {
+    this.isDragging = false;
+    this.listCategory.classList.remove("scroll-auto");
+  }
 }
+
+const myDragScroll = new DragScroll("list-category");
 
 // class MyClass {
 
