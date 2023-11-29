@@ -10,84 +10,45 @@
 //   return number.toLocaleString();
 // }]
 
-// const cards = document.getElementsByClassName('card');
-// const btnPlus = document.getElementsByClassName('btn-plus');
-// const btnMinus = document.getElementsByClassName('btn-minus');
-// const input = document.getElementsByClassName('inputAmount');
+const bagUser = document.getElementsByClassName('nav-bag')
 
+bagUser[0].addEventListener('click', () => {
+  console.log('Click')
+})
 
-// for (let i = 0; i < btnPlus.length; i++) {
-//   let btnPlusIndex = btnPlus[i]
+const inputPrice = document.getElementsByClassName('quantity');
+const plusBtn = document.getElementsByClassName('btn-plus');
 
-//   btnPlusIndex.addEventListener('onclick', () => {
-//     let getInputIndex = input[i]
-//     let valueInput = parseInt(getInputIndex.value) || 0;
-//     getInputIndex.value = valueInput + 100
-//     console.log(getInputIndex)
-//   })
-  
-// }
-
-class QuantityHandler {
-  constructor() {
-      this.decrementBtn = document.querySelector('.btn-minus');
-      this.incrementBtn = document.querySelector('.btn-plus');
-      this.quantityInput = document.getElementsById('quantity');
-
-      this.decrementBtn.addEventListener('click', this.decrement.bind(this));
-      this.incrementBtn.addEventListener('click', this.increment.bind(this));
-      this.quantityInput.addEventListener('input', this.checkInput.bind(this));
+class IncrementHandler {
+  constructor(inputClass, outputClass) {
+    this.plusBtn = document.getElementsByClassName(inputClass);
+    this.quantityInput = document.getElementsByClassName(outputClass)
   }
-
-  decrement() {
-      let currentValue = parseInt(this.quantityInput.value);
-      if (currentValue > 0) {
-          this.quantityInput.value = currentValue - 10; // Decrease by 10 or any desired step
-      }
-  }
-
   increment() {
-      let currentValue = parseInt(this.quantityInput.value);
-      this.quantityInput.value = currentValue + 10; // Increase by 10 or any desired step
-  }
-
-  checkInput() {
-      if (this.quantityInput.value < 0 || this.quantityInput.value === '') {
-          this.quantityInput.value = 0;
-      }
+    console.log(this.plusBtn.length)
   }
 }
 
-// Membuat instance baru dari class QuantityHandler
-const quantityHandler = new QuantityHandler();
+const tester = new IncrementHandler('plus-btn', 'quantity')
 
+// for (let i = 0; i < plusBtn.length; i++) {
+//   plusBtn[i].addEventListener('click', () => {
+//     inputPrice[i].value++
+//   });
+// }
+// const cards = document.getElementsByClassName('card');
+// const btnPlus = document.getElementsByClassName('btn-plus');
+// const btnMinus = document.getElementsByClassName('btn-minus');
 
+// const btnAddBag = document.getElementsByClassName('btn-submit');
 
-  // btnMinus[getIndex].addEventListener('onclick', () => {
-  //   decrement()
-  // });
+// btnAddBag[0].addEventListener('click', () => {
+//   const inputValue = inputPrice[0].value.trim(); // Menghapus spasi di awal dan akhir input
 
-  // btnPlus[getIndex].addEventListener('onclick', () => {
-  //   increment()
-  // });
-  // console.log(btnMinus[getIndex])
-
-
-
-
-
-function buttonClicked() {
-  alert(`Pesanan senilai Rp.${input.inputAmount.value} telah masuk`)
-};
-
-// window.addEventListener("scroll", function () {
-//   if (window.scrollY > navbar.clientHeight) {
-//     navbar.classList.add("nav-animation");
-//     navbar.style.animationName = "fade-in";
-//     homePage.style.marginTop = `${navbar.clientHeight}px`;
-//   } else if (window.scrollY <= navbar.clientHeight ){
-//     navbar.classList.remove("nav-animation");
-//     homePage.style.marginTop = 0;
+//   if (inputValue === '' || inputValue.includes('.') || isNaN(inputValue) || parseInt(inputValue) <= 0) {
+//     alert('Pesanan harus berupa bilangan bulat positif');
+//   } else {
+//     alert(`Total item ${parseInt(inputValue)} telah masuk`);
 //   }
 // });
 
@@ -127,14 +88,56 @@ class DragScroll {
   }
 }
 
-const myDragScroll = new DragScroll("list-category");
+const myDragScrollCategory = new DragScroll("list-category");
+const myDragScrollItem = new DragScroll("list-card");
 
-// class MyClass {
 
-//   sayWorld() {
-//     console.log('Hello World');
-//   }
+class QuantityHandler {
+  constructor() {
+      this.decrementBtn = document.querySelector('.btn-minus');
+      this.incrementBtn = document.querySelector('.btn-plus');
+      this.quantityInput = document.getElementsById('quantity');
 
+      this.decrementBtn.addEventListener('click', this.decrement.bind(this));
+      this.incrementBtn.addEventListener('click', this.increment.bind(this));
+      this.quantityInput.addEventListener('input', this.checkInput.bind(this));
+  }
+
+  decrement() {
+      let currentValue = parseInt(this.quantityInput.value);
+      if (currentValue > 0) {
+          this.quantityInput.value = currentValue - 10; // Decrease by 10 or any desired step
+      }
+  }
+
+  increment() {
+      let currentValue = parseInt(this.quantityInput.value);
+      this.quantityInput.value = currentValue + 10; // Increase by 10 or any desired step
+  }
+
+  checkInput() {
+      if (this.quantityInput.value < 0 || this.quantityInput.value === '') {
+          this.quantityInput.value = 0;
+      }
+  }
+}
+const quantityHandler = new QuantityHandler();
+
+
+
+  // btnMinus[getIndex].addEventListener('onclick', () => {
+  //   decrement()
+  // });
+
+  // btnPlus[getIndex].addEventListener('onclick', () => {
+  //   increment()
+  // });
+  // console.log(btnMinus[getIndex])
+
+
+
+
+
+// function buttonClicked() {
+//   alert(`Pesanan senilai Rp.${input.inputAmount.value} telah masuk`)
 // };
-
-// const example = new MyClass()

@@ -9,25 +9,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-slate-900 h-screen">
-    <div class="w-full h-screen absolute top-0 left-0 -z-50 bg-gradientDarken"></div>
+<body class="bg-slate-100 h-screen">
+    <div class="w-full h-screen absolute top-0 left-0 -z-50 bg-gradient-to-t from-slate-100 to-blue-100"></div>
     <nav id="nav" class="w-full h-max p-4 flex-all-center flex-col">
         <ul class=" w-11/12 flex justify-between items-center">
-            <img class="w-20" src="../src/img/home/logo.png">
+            <img class="w-20" src="../src/img/home/logo-dark.png">
             <li class="hidden text-slate-100">
                 <a href="" class="hover-navbar">home</a>
                 <a href="" class="hover-navbar">Product</a>
                 <a href="" class="hover-navbar">Testimoni</a>
                 <a href="" class="hover-navbar">About</a>
             </li>
-            <img class="" src="../src/img/round_shopping_cart_white_24dp.png" alt="bag logo" class="img-logo">
-        </ul>>
-        <div class="w-full">
+            <button class="nav-bag">
+                <img class="" src="../src/img/home/shopping_cart_dark.png" alt="bag logo" class="img-logo">
+            </button>
+        </ul>
+        <div class="w-full mt-4">
             <form class="flex items-center">
-                <label for="simple-search" class="sr-only">Search</label>
                 <div class="relative w-full">
                     <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                        <svg class="w-5 h-5" fill="rgb(100 116 139)" viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
@@ -35,15 +36,14 @@
                         </svg>
                     </div>
                     <input type="text" id="simple-search"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        class="bg-slate-100 shadow-sm border border-blue-200 w-full placeholder:text-slate-500 text-slate-900 text-sm rounded-md block pl-10 p-2.5"
                         placeholder="Search items..." required>
                 </div>
                 <button type="submit"
-                    class="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><svg
+                    class="shadow-md p-2.5 ml-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300"><svg
                         class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg></button>
             </form>
             <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
@@ -54,27 +54,27 @@
 
     <section id="home-page" class=" w-full flex-all-center">
         <div id="home-wrap" class="w-11/12">
-            <div class="flex flex-col md:flex-row ">
-                <div class="bg-slate-700 flex-all-center w-full text-white rounded-md h-40 sm:h-56 md:h-80">
+            <div class="flex flex-col md:flex-row">
+                <div class="bg-slate-100 shadow-md flex-all-center w-full text-white rounded-md h-40 sm:h-56 md:h-80">
                     <img class="object-cover h-full object-center rounded-md" src="../src/img/home/one.webp"
                         alt="Home Product">
                 </div>
-                <div class="bg-slate-800 w-full flex-col flex p-1 text-white rounded-md mt-4  md:m-0 md:w-5/12">
+                <div class="border border-blue-200 bg-gradient-to-t from-blue-200 to-blue-50 w-full shadow-md flex-col flex p-1 text-white rounded-md mt-4  md:m-0 md:w-5/12">
                     <div class="w-full py-2">
-                        <h1 class="font-poppins py-1 text-md font-semibold bg-slate-800 text-slate-200 rounded-md text-center">
-                            Choose Game :</h1>
+                        <h1 class="font-poppins py-1 text-md font-semibold text-slate-700 rounded-md text-center">
+                            Choose Game</h1>
                     </div>
 
-                    <div class="w-full flex gap-1 sm:flex-row flex-col p-1">
-                        <div class="flex-all-center bg-slate-900 py-2 px-2 rounded-md w-full">
+                    <div class="w-full flex gap-2 sm:flex-row flex-col p-1">
+                        <div class="flex-all-center bg-blue-300 py-2 px-2 rounded-md w-full">
                             <img src="../public/css/img-logo/honkai-star-rail.webp" alt="Genshin Impact"
-                                class="h-6 rounded-md">
-                            <h1 class="font-poppins text-sm ml-2">Honkai: Star Rail</h1>
+                                class="h-6 rounded-md shadow-sm">
+                            <h1 class="font-poppins text-sm ml-2 text-blue-800 font-normal tracking-wide">Honkai: Star Rail</h1>
                         </div>
-                        <div class="flex-all-center bg-slate-900 py-2 px-2 rounded-md w-full">
+                        <div class="flex-all-center bg-blue-300 py-2 px-2 rounded-md w-full">
                             <img src="../public/css/img-logo/genshin-impact.webp" alt="Genshin Impact"
-                                class="h-6 rounded-md">
-                            <h1 class="font-poppins text-sm ml-2">Genshin Impact</h1>
+                                class="h-6 rounded-md shadow-sm">
+                            <h1 class="font-poppins text-sm ml-2 text-blue-800 font-normal  tracking-wide">Genshin Impact</h1>
                         </div>
                     </div>
 
@@ -88,7 +88,7 @@
         <div class="flex flex-col w-11/12 mt-8 pb-4">
 
             <div class="flex w-full justify-between items-center">
-                <h1 class="font-poppins  text-lg text-white uppercase font-semibold">Product</h1>
+                <h1 class="font-poppins  text-lg text-slate-700 uppercase font-semibold">Product</h1>
                 <img src="css/img-logo/filter-svgrepo-com.png" class="h-5 fill-whiteImage" alt="filter">
             </div>
             <div id="list-category" class="relative gap-2 overflow-hidden flex items-center w-full my-2">
@@ -103,36 +103,58 @@
                 <button type="button" class="select-category btn-category">Spam Resin</button>
             </div>
 
-            <!-- <div class="category-item mt-2">
-                <h1 class="font-poppins px-2 py-1 text-xs bg-slate-800 text-slate-200 rounded-md">Rawat Akun</h1>
-            </div> -->
-            <button type="button" class= "text-slate-400 bg-slate-800 text-sm mt-2 p-2">Rawat Akun</button>
-            <div id="list-card" class="flex overflow-x-scroll gap-4 mt-4">
-                <div class="card w-36 h-fit bg-slate-800 p-2 rounded-lg shadow-md shadow-slate-700">
-                    <div class="card-img w-full aspect-square">
+            <div id="list-card" class="flex gap-4 mt-2 overflow-hidden items-center w-full my-2">
+                <div class="card">
+                    <div class="card-img w-32 aspect-square">
                         <img class="object-cover w-full h-full rounded-md" src="../src/img/error-404.png" alt="Item">
                     </div>
-                    <h1 class="font-poppins text-slate-300 text-sm mt-2 w-36">Name Item Lorem.</h1>
-                    <h1 class="font-poppins text-slate-100 text-md font-semibold mt-1" id="result">Rp10,000</h1>
-                    <div class="discount flex items-center">
-                        <h1 class="font-poppins text-slate-500 text-sm line-through" id="result">Rp15,000</h1>
-                        <h1 class="font-poppins text-red-300 bg-red-900 text-xs ml-1.5 py-0.5 px-1 rounded-md">66%</h1>
+                    <h1 class="name-item">Name Item Lorem</h1>
+                    <h1 class="price-item">Rp10,000</h1>
+                    <div class="discount-price flex items-center">
+                        <h1 class="font-poppins text-slate-500 text-xs line-through">Rp15,000</h1>
+                        <h1 class="font-poppins text-red-900 bg-red-300 text-xs ml-1.5 py-0.5 px-1 rounded-md">66%</h1>
                     </div>
                     <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
-                        <button type="button" class="btn-minus font-poppins">
-                            -
-                        </button>
-                        <input class="inputAmount w-full h-full mx-2 rounded-md text-center text-xs quantity" type="number"
-                            name="inputAmount" min="0" step="10">
-                        <button type="button" class="btn-plus font-poppins">
-                            +
-                        </button>
+                        <button type="button" class="btn-minus font-poppins">-</button>
+                        <input class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm" type="number"name="quantity" min="0" step="10">
+                        <button type="button" class="btn-plus font-poppins">+</button>
                     </form>
-                    <button
-                        class="btn-submit font-semibold font-poppins text-slate-100 bg-blue-600 rounded-full w-full p-1 text-xs mt-3"
-                        onclick="buttonClicked()">Add To Cart</button>
+                    <button class="btn-submit">Masukkan</button>
                 </div>
-
+                <div class="card">
+                    <div class="card-img w-32 aspect-square">
+                        <img class="object-cover w-full h-full rounded-md" src="../src/img/error-404.png" alt="Item">
+                    </div>
+                    <h1 class="name-item">Name Item Lorem</h1>
+                    <h1 class="price-item">Rp10,000</h1>
+                    <div class="discount-price flex items-center">
+                        <h1 class="font-poppins text-slate-500 text-xs line-through">Rp15,000</h1>
+                        <h1 class="font-poppins text-red-900 bg-red-300 text-xs ml-1.5 py-0.5 px-1 rounded-md">66%</h1>
+                    </div>
+                    <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
+                        <button type="button" class="btn-minus font-poppins">-</button>
+                        <input class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm" type="number"name="quantity" min="0" step="10">
+                        <button type="button" class="btn-plus font-poppins">+</button>
+                    </form>
+                    <button class="btn-submit">Masukkan</button>
+                </div>
+                <div class="card">
+                    <div class="card-img w-32 aspect-square">
+                        <img class="object-cover w-full h-full rounded-md" src="../src/img/error-404.png" alt="Item">
+                    </div>
+                    <h1 class="name-item">Name Item Lorem</h1>
+                    <h1 class="price-item">Rp10,000</h1>
+                    <div class="discount-price flex items-center">
+                        <h1 class="font-poppins text-slate-500 text-xs line-through">Rp15,000</h1>
+                        <h1 class="font-poppins text-red-900 bg-red-300 text-xs ml-1.5 py-0.5 px-1 rounded-md">66%</h1>
+                    </div>
+                    <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
+                        <button type="button" class="btn-minus font-poppins">-</button>
+                        <input class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm" type="number"name="quantity" min="0" step="10">
+                        <button type="button" class="btn-plus font-poppins">+</button>
+                    </form>
+                    <button class="btn-submit">Masukkan</button>
+                </div>
             </div>
         </div>
     </section>

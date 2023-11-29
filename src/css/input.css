@@ -5,17 +5,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 @layer components {
+    .card {
+        @apply w-36 h-fit bg-slate-200 shadow-md p-2 rounded-lg border border-blue-200
+    }
+    .name-item {
+        @apply font-poppins text-blue-900 text-xs line-clamp-2 mt-2
+    }
+    .price-item {
+        @apply font-poppins text-slate-800 text-sm font-semibold mt-1
+    }
     .hover-navbar {
         @apply hover:text-slate-400 transition duration-150 m-2 uppercase text-sm font-poppins
     }
     .btn-plus {
-        @apply flex-all-center h-full text-lg aspect-square rounded-md text-slate-300 bg-slate-700 leading-relaxed font-medium
+        @apply flex-all-center px-4 h-full text-lg aspect-square rounded-md bg-blue-300 text-blue-800 leading-relaxed font-semibold
     }
     .btn-minus {
-        @apply flex-all-center h-full text-lg aspect-square rounded-md text-slate-300 bg-slate-700 leading-relaxed font-medium
+        @apply flex-all-center px-4 h-full text-lg aspect-square rounded-md bg-blue-300 text-blue-800 leading-relaxed font-semibold
+    }
+    .btn-submit {
+        @apply font-poppins text-slate-100 bg-blue-500 rounded-md w-full p-1 text-xs mt-3
     }
     .btn-category {
-        @apply font-poppins px-2 py-1 text-sm whitespace-nowrap bg-blue-950 text-blue-400 rounded-md tracking-wide
+        @apply font-poppins py-2 px-3 text-sm whitespace-nowrap bg-blue-300 text-blue-800 rounded-md tracking-wide
     }
     .flex-all-center {
         display: flex;
