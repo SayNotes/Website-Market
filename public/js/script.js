@@ -2,13 +2,20 @@
 
 // const { document } = require("postcss");
 
-// const priceLocal = 100;
-// let input = document.getElementById("numericInput");
-// let demand = document.querySelector("h1#result");
+const bagBtn = document.querySelector('button.nav-bag');
+const bagMenu = document.querySelector('.nav-bag-menu');
+const bagExitBtn = document.querySelector('.bag-exit');
 
-// function formatNumberWithCommas(number) {
-//   return number.toLocaleString();
-// }]
+bagBtn.addEventListener('click', () => {
+  bagMenu.classList.remove('-translate-y-full');
+  bagMenu.classList.add('-translate-y-0');
+});
+
+bagExitBtn.addEventListener('click', () => {
+  bagMenu.classList.remove('-translate-y-0');
+  bagMenu.classList.add('-translate-y-full');
+});
+
 
 const bagUser = document.getElementsByClassName('nav-bag')
 

@@ -10,6 +10,11 @@
 </head>
 
 <body class="bg-slate-100 h-screen">
+
+    <div class="nav-bag-menu w-full h-1/2 bg-slate-200 -translate-y-full fixed z-50 flex-all-center">
+        <button class="bag-exit">Keluar</button>
+    </div>
+
     <div class="w-full h-screen absolute top-0 left-0 -z-50 bg-gradient-to-t from-slate-100 to-blue-100"></div>
     <nav id="nav" class="w-full h-max p-4 flex-all-center flex-col">
         <ul class=" w-11/12 flex justify-between items-center">
@@ -54,27 +59,25 @@
 
     <section id="home-page" class=" w-full flex-all-center">
         <div id="home-wrap" class="w-11/12">
-            <div class="flex flex-col md:flex-row">
-                <div class="bg-slate-100 shadow-md flex-all-center w-full text-white rounded-md h-40 sm:h-56 md:h-80">
+            <div class="flex flex-col sm:w-full">
+                <div class="bg-slate-800 shadow-md flex-all-center w-full text-white rounded-md h-40 sm:h-56 md:h-80">
                     <img class="object-cover h-full object-center rounded-md" src="../src/img/home/one.webp"
                         alt="Home Product">
                 </div>
-                <div class="border border-blue-200 bg-gradient-to-t from-blue-200 to-blue-50 w-full shadow-md flex-col flex p-1 text-white rounded-md mt-4  md:m-0 md:w-5/12">
+                <div class="w-full border border-blue-200 bg-gradient-to-t from-blue-200 to-blue-50 shadow-md flex-col flex p-1 text-white rounded-md mt-4">
                     <div class="w-full py-2">
-                        <h1 class="font-poppins py-1 text-md font-semibold text-slate-700 rounded-md text-center">
-                            Choose Game</h1>
+                        <h1 class="font-poppins py-1 text-md font-semibold text-slate-700 rounded-md text-center">Choose Game</h1>
                     </div>
-
                     <div class="w-full flex gap-2 sm:flex-row flex-col p-1">
                         <div class="flex-all-center bg-blue-300 py-2 px-2 rounded-md w-full">
                             <img src="../public/css/img-logo/honkai-star-rail.webp" alt="Genshin Impact"
                                 class="h-6 rounded-md shadow-sm">
-                            <h1 class="font-poppins text-sm ml-2 text-blue-800 font-normal tracking-wide">Honkai: Star Rail</h1>
+                            <a href="" class="font-poppins text-sm ml-2 text-blue-800 font-normal tracking-wide">Honkai: Star Rail</a>
                         </div>
                         <div class="flex-all-center bg-blue-300 py-2 px-2 rounded-md w-full">
                             <img src="../public/css/img-logo/genshin-impact.webp" alt="Genshin Impact"
                                 class="h-6 rounded-md shadow-sm">
-                            <h1 class="font-poppins text-sm ml-2 text-blue-800 font-normal  tracking-wide">Genshin Impact</h1>
+                            <a href="" class="font-poppins text-sm ml-2 text-blue-800 font-normal tracking-wide">Genshin Impact</a>
                         </div>
                     </div>
 
