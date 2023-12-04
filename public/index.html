@@ -9,25 +9,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-slate-100 h-screen">
+<body class="bg-slate-100 h-screen "">
 
-    <div class="nav-bag-menu w-full h-1/2 bg-slate-200 -translate-y-full fixed z-50 flex-all-center">
-        <button class="bag-exit">Keluar</button>
-    </div>
 
     <div class="w-full h-screen absolute top-0 left-0 -z-50 bg-gradient-to-t from-slate-100 to-blue-100"></div>
-    <nav id="nav" class="w-full h-max p-4 flex-all-center flex-col">
+    <nav id="nav" class=" w-full h-max p-4 flex-all-center flex-col">
         <ul class=" w-11/12 flex justify-between items-center">
-            <img class="w-20" src="../src/img/home/logo-dark.png">
+            <img class="h-7" src="../src/img/home/logo-dark.png">
             <li class="hidden text-slate-100">
                 <a href="" class="hover-navbar">home</a>
                 <a href="" class="hover-navbar">Product</a>
                 <a href="" class="hover-navbar">Testimoni</a>
                 <a href="" class="hover-navbar">About</a>
             </li>
-            <button class="nav-bag">
-                <img class="" src="../src/img/home/shopping_cart_dark.png" alt="bag logo" class="img-logo">
-            </button>
+            <a class="nav-bag" href="shopping-cart.html">
+                <img class="h-6" src="../src/img/home/shopping_cart_dark.png" alt="bag logo" class="img-logo">
+            </a>
+
         </ul>
         <div class="w-full mt-4">
             <form class="flex items-center">
@@ -48,7 +46,8 @@
                     class="shadow-md p-2.5 ml-2 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300"><svg
                         class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                     </svg></button>
             </form>
             <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
@@ -64,20 +63,24 @@
                     <img class="object-cover h-full object-center rounded-md" src="../src/img/home/one.webp"
                         alt="Home Product">
                 </div>
-                <div class="w-full border border-blue-200 bg-gradient-to-t from-blue-200 to-blue-50 shadow-md flex-col flex p-1 text-white rounded-md mt-4">
+                <div
+                    class="w-full border border-blue-200 bg-gradient-to-t from-blue-200 to-blue-50 shadow-md flex-col flex p-1 text-white rounded-md mt-4">
                     <div class="w-full py-2">
-                        <h1 class="font-poppins py-1 text-md font-semibold text-slate-700 rounded-md text-center">Choose Game</h1>
+                        <h1 class="font-poppins py-1 text-md font-semibold text-slate-700 rounded-md text-center">Choose
+                            Game</h1>
                     </div>
                     <div class="w-full flex gap-2 sm:flex-row flex-col p-1">
                         <div class="flex-all-center bg-blue-300 py-2 px-2 rounded-md w-full">
                             <img src="../public/css/img-logo/honkai-star-rail.webp" alt="Genshin Impact"
                                 class="h-6 rounded-md shadow-sm">
-                            <a href="" class="font-poppins text-sm ml-2 text-blue-800 font-normal tracking-wide">Honkai: Star Rail</a>
+                            <a href="" class="font-poppins text-sm ml-2 text-blue-800 font-normal tracking-wide">Honkai:
+                                Star Rail</a>
                         </div>
                         <div class="flex-all-center bg-blue-300 py-2 px-2 rounded-md w-full">
                             <img src="../public/css/img-logo/genshin-impact.webp" alt="Genshin Impact"
                                 class="h-6 rounded-md shadow-sm">
-                            <a href="" class="font-poppins text-sm ml-2 text-blue-800 font-normal tracking-wide">Genshin Impact</a>
+                            <a href="" class="font-poppins text-sm ml-2 text-blue-800 font-normal tracking-wide">Genshin
+                                Impact</a>
                         </div>
                     </div>
 
@@ -91,7 +94,7 @@
         <div class="flex flex-col w-11/12 mt-8 pb-4">
 
             <div class="flex w-full justify-between items-center">
-                <h1 class="font-poppins  text-lg text-slate-700 uppercase font-semibold">Product</h1>
+                <h1 class="font-poppins  text-lg text-slate-700font-medium">Product</h1>
                 <img src="css/img-logo/filter-svgrepo-com.png" class="h-5 fill-whiteImage" alt="filter">
             </div>
             <div class="list-category relative gap-2 overflow-hidden flex items-center w-full my-2">
@@ -117,7 +120,9 @@
                     </div>
                     <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
                         <button type="button" class="btn-minus font-poppins">-</button>
-                        <input class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm" type="number"name="quantity" min="0" step="10">
+                        <input
+                            class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm"
+                            type="number" name="quantity" min="0" step="10">
                         <button type="button" class="btn-plus font-poppins">+</button>
                     </form>
                     <button class="btn-submit">Masukkan</button>
@@ -134,7 +139,9 @@
                     </div>
                     <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
                         <button type="button" class="btn-minus font-poppins">-</button>
-                        <input class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm" type="number"name="quantity" min="0" step="10">
+                        <input
+                            class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm"
+                            type="number" name="quantity" min="0" step="10">
                         <button type="button" class="btn-plus font-poppins">+</button>
                     </form>
                     <button class="btn-submit">Masukkan</button>
@@ -151,7 +158,9 @@
                     </div>
                     <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
                         <button type="button" class="btn-minus font-poppins">-</button>
-                        <input class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm" type="number"name="quantity" min="0" step="10">
+                        <input
+                            class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm"
+                            type="number" name="quantity" min="0" step="10">
                         <button type="button" class="btn-plus font-poppins">+</button>
                     </form>
                     <button class="btn-submit">Masukkan</button>
@@ -171,7 +180,9 @@
                     </div>
                     <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
                         <button type="button" class="btn-minus font-poppins">-</button>
-                        <input class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm" type="number"name="quantity" min="0" step="10">
+                        <input
+                            class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm"
+                            type="number" name="quantity" min="0" step="10">
                         <button type="button" class="btn-plus font-poppins">+</button>
                     </form>
                     <button class="btn-submit">Masukkan</button>
@@ -188,7 +199,9 @@
                     </div>
                     <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
                         <button type="button" class="btn-minus font-poppins">-</button>
-                        <input class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm" type="number"name="quantity" min="0" step="10">
+                        <input
+                            class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm"
+                            type="number" name="quantity" min="0" step="10">
                         <button type="button" class="btn-plus font-poppins">+</button>
                     </form>
                     <button class="btn-submit">Masukkan</button>
@@ -205,7 +218,9 @@
                     </div>
                     <form class="btn-plus-and-minus w-full flex-all-center h-6 mt-2">
                         <button type="button" class="btn-minus font-poppins">-</button>
-                        <input class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm" type="number"name="quantity" min="0" step="10">
+                        <input
+                            class="quantity bg-slate-50 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm"
+                            type="number" name="quantity" min="0" step="10">
                         <button type="button" class="btn-plus font-poppins">+</button>
                     </form>
                     <button class="btn-submit">Masukkan</button>

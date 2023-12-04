@@ -2,19 +2,9 @@
 
 // const { document } = require("postcss");
 
-const bagBtn = document.querySelector('button.nav-bag');
-const bagMenu = document.querySelector('.nav-bag-menu');
-const bagExitBtn = document.querySelector('.bag-exit');
 
-bagBtn.addEventListener('click', () => {
-  bagMenu.classList.remove('-translate-y-full');
-  bagMenu.classList.add('-translate-y-0');
-});
 
-bagExitBtn.addEventListener('click', () => {
-  bagMenu.classList.remove('-translate-y-0');
-  bagMenu.classList.add('-translate-y-full');
-});
+
 
 
 const bagUser = document.getElementsByClassName('nav-bag')

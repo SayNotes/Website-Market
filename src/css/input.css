@@ -4,6 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* npx tailwindcss -i ./src/css/input.css -o ./public/css/style.css --watch */
+
 @layer components {
     .card {
         @apply w-36 h-fit bg-slate-200 shadow-md p-2 rounded-lg border border-blue-200
