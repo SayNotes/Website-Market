@@ -7,43 +7,29 @@
 
 
 
-const bagUser = document.getElementsByClassName('nav-bag')
+const btnBag = document.getElementsByClassName('nav-bag');
 
-bagUser[0].addEventListener('click', () => {
+btnBag[0].addEventListener('click', () => {
   console.log('Click')
 })
 
 const inputPrice = document.getElementsByClassName('quantity');
-
-
-
-class IncrementHandler {
-  constructor(inputClass, inputClassValue, outputClass) {
-    this.btn = document.getElementsByClassName(inputClass);
-    this.output = document.getElementsByClassName(outputClass);
-    this.length = inputClassValue;
+class NoDecimalInput {
+  constructor(inputClass) {
+    this.inputs = document.getElementsByClassName(inputClass);
+    this.preventNonNumeric();
   }
-  increment() {
-    for (let i = 0; i < this.length; i++) {
-      this.btn[i].addEventListener('click', () => {
-        this.output[i].value++;
-      });
-    }
-  }
-}
-class DecrementHandler {
-  constructor(inputClass, inputClassValue, outputClass) {
-    this.btn = document.getElementsByClassName(inputClass);
-    this.output = document.getElementsByClassName(outputClass);
-    this.length = inputClassValue;
-  }
-  decrement() {
-    for (let i = 0; i < this.length; i++) {
-      this.btn[i].addEventListener('click', () => {
-        if (this.output[i].value > 0) {
-          this.output[i].value--;
-        } else {
-          this.output[i].value = 0;
+
+  preventNonNumeric() {
+    for (let i = 0; i < this.inputs.length; i++) {
+      this.inputs[i].addEventListener('keydown', function (event) {
+        const numericKeys = [
+          '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+          'Backspace', 'ArrowLeft', 'ArrowRight', 'Delete',
+          'Tab', 'Home', 'End',
+        ];
+        if (!numericKeys.includes(event.key)) {
+          event.preventDefault();
         }
       });
     }
@@ -51,20 +37,41 @@ class DecrementHandler {
 }
 
 
+const noDecimalInputs = new NoDecimalInput('quantity');
 
-{
 
-const btnPlus = document.getElementsByClassName('btn-plus');
-const productItemPlus = new IncrementHandler('btn-plus', btnPlus.length, 'quantity');
-productItemPlus.increment();
 
-const btnMinus = document.getElementsByClassName('btn-minus');
-const productItemMinus = new DecrementHandler('btn-minus', btnMinus.length, 'quantity');
-productItemMinus.decrement();
+class CounterHandler {
+  constructor(btnClass, outputClass, operation) {
+    this.btns = document.getElementsByClassName(btnClass);
+    this.outputs = document.getElementsByClassName(outputClass);
+    this.operation = operation;
+  }
 
+  operate() {
+    for (let i = 0; i < this.btns.length; i++) {
+      this.btns[i].addEventListener('click', () => {
+        if (this.operation === 'increment') {
+          this.outputs[i].value++;
+        } else if (this.operation === 'decrement') {
+          if (this.outputs[i].value !== null && !isNaN(this.outputs[i].value)) {
+            this.outputs[i].value = Math.max(0, this.outputs[i].value - 1);
+          } else {
+            this.outputs[i].value = this.outputs[i].value === null ? 0 : this.outputs[i].value;
+          }
+        }
+      });
+    }
+  }
 }
 
-class DragScroll {
+const productItemPlus = new CounterHandler('btn-plus', 'quantity', 'increment');
+productItemPlus.operate();
+const productItemMinus = new CounterHandler('btn-minus', 'quantity', 'decrement');
+productItemMinus.operate();
+
+
+class DragScrollX {
   constructor(elementClass) {
     this.listCategory = document.getElementsByClassName(elementClass);
     this.isDragging = false;
@@ -103,8 +110,8 @@ class DragScroll {
   }
 }
 
-const myDragScrollCategory = new DragScroll("list-category");
-const myDragScrollItem = new DragScroll("list-card");
+const DragScrollXCategory = new DragScrollX("list-category");
+const DragScrollXCart = new DragScrollX("list-card");
 
 
 

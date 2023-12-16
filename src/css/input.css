@@ -37,4 +37,27 @@
         align-items: center;
     }
     
+    .product-card {
+        @apply flex bg-blue-50 p-2 rounded-md h-24 items-center;
+    }
+
+    .product-img {
+        @apply h-full rounded-md shadow-sm;
+    }
+
+    .product-info {
+        @apply ml-4 flex flex-col h-full justify-between w-full;
+    }
+
+    .product-price {
+        @apply text-slate-800 text-base font-medium;
+    }
+
+    .quantity-input {
+        @apply bg-slate-200 text-slate-800 w-full h-full mx-2 rounded-md text-center text-sm;
+    }
+
+    .quantity-btn {
+        @apply h-7 w-32 flex items-center;
+    }
 }

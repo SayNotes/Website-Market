@@ -12,7 +12,8 @@
 <body class="bg-slate-100 h-screen "">
 
 
-    <div class="w-full h-screen absolute top-0 left-0 -z-50 bg-gradient-to-t from-slate-100 to-blue-100"></div>
+    <div class=" w-full h-screen absolute top-0 left-0 -z-50 bg-gradient-to-t from-slate-100 to-blue-100">
+    </div>
     <nav id="nav" class=" w-full h-max p-4 flex-all-center flex-col">
         <ul class=" w-11/12 flex justify-between items-center">
             <img class="h-7" src="../src/img/home/logo-dark.png">
@@ -22,7 +23,7 @@
                 <a href="" class="hover-navbar">Testimoni</a>
                 <a href="" class="hover-navbar">About</a>
             </li>
-            <a class="nav-bag" href="shopping-cart.html">
+            <a class="nav-bag" href="shopCart.php">
                 <img class="h-6" src="../src/img/home/shopping_cart_dark.png" alt="bag logo" class="img-logo">
             </a>
 
@@ -66,8 +67,9 @@
                 <div
                     class="w-full border border-blue-200 bg-gradient-to-t from-blue-200 to-blue-50 shadow-md flex-col flex p-1 text-white rounded-md mt-4">
                     <div class="w-full py-2">
-                        <h1 class="font-poppins py-1 text-md font-semibold text-slate-700 rounded-md text-center">Choose
-                            Game</h1>
+                        <h1 class="font-poppins py-1 text-md font-semibold text-slate-700 rounded-md text-center">
+                            Choose Game
+                        </h1>
                     </div>
                     <div class="w-full flex gap-2 sm:flex-row flex-col p-1">
                         <div class="flex-all-center bg-blue-300 py-2 px-2 rounded-md w-full">
@@ -94,7 +96,7 @@
         <div class="flex flex-col w-11/12 mt-8 pb-4">
 
             <div class="flex w-full justify-between items-center">
-                <h1 class="font-poppins  text-lg text-slate-700font-medium">Product</h1>
+                <h1 class="font-poppins  text-lg text-slate-700 font-semibold">Product</h1>
                 <img src="css/img-logo/filter-svgrepo-com.png" class="h-5 fill-whiteImage" alt="filter">
             </div>
             <div class="list-category relative gap-2 overflow-hidden flex items-center w-full my-2">
@@ -228,57 +230,22 @@
             </div>
         </div>
     </section>
-    <section id="footer-page" class="bg-slate-800 w-full flex-all-center flex-col py-4">
+    <section id="footer-page" class="bg-blue-600 w-full flex-all-center flex-col py-4">
         <div class="wrap-footer w-11/12">
             <div id="logo-footer" class="flex-all-center p-2">
-                <img class="w-20" src="../img/logo.png" alt="logo">
+                <img class="w-24" src="../src/img/home/logo.png" alt="logo">
             </div>
-            <h1 class="mt-2.5 text-center text-xs rounded-full p-1 bg-slate-900 text-slate-400">Social Media</h1>
-            <div class="logo-media-social flex justify-center gap-4 py-4">
-
-                <div class="wrap-logo flex-all-center flex-col">
-                    <img class="rounded-md w-8" src="./css/img-logo/facebook-logo.png" alt="">
-                </div>
-                <div class="wrap-logo flex-all-center flex-col">
-                    <img class="rounded-md w-8" src="./css/img-logo/instagram-logo.png" alt="">
-                </div>
-                <div class="wrap-logo flex-all-center flex-col">
-                    <img class="rounded-md w-8" src="./css/img-logo/telegram-logo.png" alt="">
-                </div>
-                <div class="wrap-logo flex-all-center flex-col">
-                    <img class="rounded-md w-8" src="./css/img-logo/wa-logo.png" alt="">
-                </div>
-
+            <div class="footer-menu mt-4">
+                <h1 class="font-poppins text-base text-slate-100">
+                    Sosial Media & Kontak
+                </h1>
+                <ul class="mt-2 gap-2">
+                    <li class="font-poppins text-sm text-slate-100">Facebook</li>
+                    <li class="font-poppins text-sm text-slate-100">WhatsApp</li>
+                    <li class="font-poppins text-sm text-slate-100">Telegram</li>
+                </ul>
             </div>
-            <!-- <div class="footer-content ">
-                <div class="about w-full flex flex-col"> -->
-            <!-- 
-                    <h1 class="font-poppins text-md text-slate-200 mt-2">About</h1>
-                    <p class="rounded-md font-poppins text-xs text-slate-500 p-1">Halo, nama saya
-                        <span class="text-blue-600">Sultan</span>.
-                        Saya memiliki minat dalam bidang teknologi dan ingin mempelajari lebih
-                        lanjut tentang pengembangan web. Saya membuat website ini untuk mempermudah orang-orang dalam
-                        mencari informasi yang mereka butuhkan. Terima kasih sudah berkunjung.
-                    </p>
-                    <h1 class="font-poppins text-md text-slate-200 mt-2">Social Media</h1>
-                    <ul class=" mt-1">
-                        <li class="grid gap-1">
-                            <a class="rounded-md font-poppins text-xs text-slate-500 bg-slate-900 p-2">Instagram</a>
-                            <a class="rounded-md font-poppins text-xs text-slate-500 bg-slate-900 p-2">Facebook</a>
-                        </li>
-                    </ul>
-                    <h1 class="font-poppins text-md text-slate-200 mt-2">Contact
-                        <img class="ml-2 h-3 inline" src="../img/img-logo/output-onlinepngtools.png" alt="contact">
-                    </h1>
-                    <ul class=" mt-1">
-                        <li class="grid gap-1">
-                            <a class="rounded-md font-poppins text-xs text-slate-500 bg-slate-900 p-2">WhatsApp</a>
-                            <a class="rounded-md font-poppins text-xs text-slate-500 bg-slate-900 p-2">Telegram</a>
-                            <a class="rounded-md font-poppins text-xs text-slate-500 bg-slate-900 p-2">Messenger</a>
-                        </li>
-                    </ul> -->
 
-        </div>
     </section>
 
 
