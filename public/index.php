@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasa Joki</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css?version=1" />
 </head>
 
-<body class="bg-slate-100 h-screen "">
+<body class="bg-slate-100 h-screen">
 
 
     <div class=" w-full h-screen absolute top-0 left-0 -z-50 bg-gradient-to-t from-slate-100 to-blue-100">
@@ -23,7 +24,7 @@
                 <a href="" class="hover-navbar">Testimoni</a>
                 <a href="" class="hover-navbar">About</a>
             </li>
-            <a class="nav-bag" href="shopCart.php">
+            <a class="nav-bag" href="shop-cart.php">
                 <img class="h-6" src="../src/img/home/shopping_cart_dark.png" alt="bag logo" class="img-logo">
             </a>
 
@@ -96,7 +97,7 @@
         <div class="flex flex-col w-11/12 mt-8 pb-4">
 
             <div class="flex w-full justify-between items-center">
-                <h1 class="font-poppins  text-lg text-slate-700 font-semibold">Product</h1>
+                <h1 class="font-poppins text-lg text-slate-700 font-semibold">Product</h1>
                 <img src="css/img-logo/filter-svgrepo-com.png" class="h-5 fill-whiteImage" alt="filter">
             </div>
             <div class="list-category relative gap-2 overflow-hidden flex items-center w-full my-2">
@@ -108,7 +109,10 @@
                 <button type="button" class="select-category btn-category">Quest</button>
                 <button type="button" class="select-category btn-category">Spam Resin</button>
             </div>
-
+            <div class="info-category flex items-center justify-end">
+                <h1 class="text-base text-right font-semibold text-slate-700">List 1</h1>
+                <img src="css/img-logo/information.png" alt="infomation" srcset="" class="h-4 ml-1">
+            </div>
             <div class="list-card flex gap-4 mt-2 overflow-hidden items-center w-full my-2">
                 <div class="card">
                     <div class="card-img w-32 aspect-square">
@@ -168,7 +172,10 @@
                     <button class="btn-submit">Masukkan</button>
                 </div>
             </div>
-
+            <div class="info-category flex items-center justify-end">
+                <h1 class="text-base text-right font-semibold text-slate-700">List 2</h1>
+                <img src="css/img-logo/information.png" alt="infomation" srcset="" class="h-4 ml-1">
+            </div>
             <div class="list-card flex gap-4 mt-2 overflow-hidden items-center w-full my-2">
                 <div class="card">
                     <div class="card-img w-32 aspect-square">
@@ -230,22 +237,36 @@
             </div>
         </div>
     </section>
-    <section id="footer-page" class="bg-blue-600 w-full flex-all-center flex-col py-4">
+    <section id="footer-page" class="bg-gradient-to-b from-blue-600 to-blue-900 w-full flex-all-center flex-col py-4">
         <div class="wrap-footer w-11/12">
             <div id="logo-footer" class="flex-all-center p-2">
                 <img class="w-24" src="../src/img/home/logo.png" alt="logo">
             </div>
             <div class="footer-menu mt-4">
-                <h1 class="font-poppins text-base text-slate-100">
+                <h1 class="font-poppins text-lg text-slate-100">
+                    Tentang Wesbsite
+                </h1>
+                <p class="font-poppins text-xs text-blue-300 mt-2 text">Situs ini dirancang untuk memudahkan pengalaman
+                    berbelanja Anda. Pilih produk, tambahkan ke keranjang, dan selesaikan pembelian dengan mudah.
+                    Konfirmasi pesanan Anda di halaman kontak. Semoga fitur ini memberikan kenyamanan pada setiap
+                    langkah transaksi Anda.</p>
+            </div>
+            <div class="footer-menu mt-4">
+                <h1 class="font-poppins text-lg text-slate-100">
                     Sosial Media & Kontak
                 </h1>
-                <ul class="mt-2 gap-2">
-                    <li class="font-poppins text-sm text-slate-100">Facebook</li>
-                    <li class="font-poppins text-sm text-slate-100">WhatsApp</li>
-                    <li class="font-poppins text-sm text-slate-100">Telegram</li>
-                </ul>
+                <div class="mt-2 grid grid-cols-2 gap-1.5">
+                    <a
+                        class="font-poppins text-xs text-blue-600 p-1.5 bg-slate-100 font-semibold rounded-md text-center">Facebook</a>
+                    <a
+                        class="font-poppins text-xs text-blue-600 p-1.5 bg-slate-100 font-semibold rounded-md text-center">Instagram</a>
+                    <a
+                        class="font-poppins text-xs text-blue-600 p-1.5 bg-slate-100 font-semibold rounded-md text-center">WhatsApp</a>
+                    <a
+                        class="font-poppins text-xs text-blue-600 p-1.5 bg-slate-100 font-semibold rounded-md text-center">Telegram</a>
+                </div>
             </div>
-
+        </div>
     </section>
 
 

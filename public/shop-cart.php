@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jasa Joki</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -29,7 +30,7 @@
                     class="w-full border border-blue-200 bg-gradient-to-t from-blue-200 to-blue-50 shadow-md flex-col flex p-1 text-white rounded-md mt-4">
                     <div class="w-full p-2 gap-x-1">
                         <?php
-                        for ($i = 0; $i < 6; $i++) {
+                        for ($i = 0; $i < 5; $i++) {
                         ?>
                         <div class="product-card">
                             <img src="../public/css/img-logo/honkai-star-rail.webp" alt="Genshin Impact"
